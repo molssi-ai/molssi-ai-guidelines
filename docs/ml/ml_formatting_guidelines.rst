@@ -30,15 +30,22 @@ atomic symbols, *etc.*), and (ii) chemical features (e.g., energetics, electroni
 
 *Geometrical Data*
 ^^^^^^^^^^^^^^^^^^
-Representation of geometrical data pertinent to individual chemical species such as molecules (or monomers, dimers, polymers, clusters,
-unit cells, *etc.*) is dependent upon the task and adopted ML algorithm. In general, the raw information on individual molecular structures
-should be stored as separate files within a subfolder of the root directory called geometries. The recommended file format for storing 
-geometrical data is *.mol* which allows for a convenient usage of popular and free chemical data conversion toolkits such as 
-`Open Babel <http://openbabel.org/wiki/Main_Page>`_. This representation is probably most useful before training each model since 
-the majority of the ML models require a featurized version of these structures into a numerical representation or embedding. 
+Representation of geometrical data pertinent to individual chemical species such as molecules (or monomers, dimers, polymers, clusters, unit
+cells, *etc.*) is dependent upon the task and adopted ML algorithm. In general, the raw information on individual molecular structures
+should be stored as separate files within a subfolder of the root directory called geometries. The recommended file format for storing
+geometrical data is the `Chemical Table Format (*.mol*) <https://en.wikipedia.org/wiki/Chemical_table_file>`_ which allows for a convenient
+usage of popular and free chemical data conversion toolkits such as `Open Babel <http://openbabel.org/wiki/Main_Page>`_. This representation
+is probably most useful before training each model since the majority of the ML models require a featurized version of these structures into
+a numerical representation or embedding.
+
+For molecules with no bonding information, it is acceptable to use the `XYZ file format (*.xyz*)
+<https://en.wikipedia.org/wiki/XYZ_file_format>`_ while for periodic (crystalline) systems the `Crystallographic Information File (*.cif*)
+<https://en.wikipedia.org/wiki/Crystallographic_Information_File>`_ would be appropriate, while for biomolecules the closely related
+`Macromolecular Crystallographic Information File (*.cif* or *.mmcif*) <https://en.wikipedia.org/wiki/Crystallographic_Information_File>`_
+is usually the best choice. 
 
 The text-based molecular structure representations such as 
-`*Simplified Molecular-Input Line-Entry System (SMILES)* <https://en.wikipedia.org/wiki/Simplified_molecular-input_line-entry_system>`_
+`Simplified Molecular-Input Line-Entry System (SMILES) <https://en.wikipedia.org/wiki/Simplified_molecular-input_line-entry_system>`_
 provide an alternative to geometrical coordinates and are comparatively straightforward to be stored in the dataset tables. 
 SMILES are often precursors for an embedded vector representation of the input structures. Software packages such as 
 `RDKit <https://www.rdkit.org/>`_ cheminformatics program and `Open Babel <http://openbabel.org/wiki/Main_Page>`_ toolkit provide 
@@ -48,10 +55,10 @@ can be based on graph convolutions, physical properties or *extended-connectivit
 *Chemical Features*
 ^^^^^^^^^^^^^^^^^^^
 MolSSI's recommendation for storing the features such as SMILES, energetics or property values is the *comma-separated value (CSV)*
-format. This file should be stored in the root directory of the main dataset repository. This provides a coherent and convenient
-way for popular tools such as the `Pandas <https://pandas.pydata.org/>`_ library in python to perform the input/output (I/O) 
-operations and easily convert them between the popular storage formats such as 
-`*hierarchical data format (HDF)* <https://www.hdfgroup.org/>`_, JSON *etc.*.
+format. This file should be stored in the root directory of the main dataset repository as ``<dataset_name>_meta.csv``. This provides a
+coherent and convenient way for popular tools such as the `Pandas <https://pandas.pydata.org/>`_ library in python to perform the
+input/output (I/O) operations and easily convert them between the popular storage formats such as `hierarchical data format (HDF)
+<https://www.hdfgroup.org/>`_, JSON *etc.*.
 
 Metadata File Formats
 ---------------------
