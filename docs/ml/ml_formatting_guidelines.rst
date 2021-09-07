@@ -62,7 +62,7 @@ description of what they are referring to. For example, molecular charge is ofte
 charge on the molecule at its ground electronic state in vacuum.
 
 Naming Conventions
------------------
+------------------
 In order to make both I/O, query and search operations more convenient, all geometrical files within geometries folder should
 be named as ``<dataset_name>_<id>.mol`` where the name of the dataset in the all-lowercase form is appended by its dataset table
 ``id`` and separated by an underscore. Each ``id`` is an integer type value located at the first column of the dataset table and 
@@ -87,8 +87,9 @@ For dense vectors of variable length, however, multiple techniques can be adopte
 the input vectors of the same length, it is possible to find the dimension of the largest vector and pad the other smaller-size
 vector instances with zeros. Popular ML frameworks such as TensorFlow provide data preprocessing tools to deal with these cases.
 Nevertheless, zero padding wastes the storage resources. In some cases, we might choose to organize such variable length features
-in separate ``<feature>.csv`` files in the root directory and reflect their descriptions in the ``<dataset_name>_meta.csv`` file.
-MolSSI’s recommendation, however, is to keep the number of files in the root directory to its minimum.
+in separate ``<feature>.csv`` files in the root directory and deal with them differentlly alongside describing the details of the 
+adopted approach in the corresponding ``<dataset_name>_meta.csv`` file. MolSSI’s recommendation, however, is to keep the number of
+files in the root directory to its minimum.
 
 Another way is to store the vector elements is to serialize the vector to a string or byte representation. The former representation
 might not be economical for very large datasets while the latter might be more appropriate for I/O operations via limited bandwidths
