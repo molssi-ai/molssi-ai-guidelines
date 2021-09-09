@@ -25,4 +25,15 @@ Organizations and Institutions
 
 * `European Organization For Nuclear Research and OpenAIRE "Zenodo", CERN (2013) <https://doi.org/10.25495/7gxk-rd71>`_
 * `DataCite Fabrica, Version 3.9.37 (2021) <https://doi.datacite.org/>`_
-* ` <>`_
+* `Center for Open Science (COS) "Open Science Framework (OSF)" (2013-) <https://osf.io/>`_
+    * `Open Science Framework (OSF), "Best Practices" <https://help.osf.io/hc/en-us/categories/360001530634-Best-Practices>`_
+    * `Open Science Framework (OSF), "OSF Guidelines" <https://help.osf.io/hc/en-us>`_
+    * `Open Science Framework (OSF), "Transparency and Openness Promotion (TOP) Guidelines" (2015) <https://www.cos.io/initiatives/top-guidelines>`_
+
+Societies, Communities and Research Groups
+==========================================
+
+* `Code for Science and Society (CS&S) <https://codeforscience.org/>`_
+* `Research Software Alliance (ReSA) <https://www.researchsoft.org/>`_
+    * `Research Software Alliance (ReSA), "Resources" <https://www.researchsoft.org/resa-resources/>`_
+    * `Research Software Alliance (ReSA), "Guidelines" <https://www.researchsoft.org/guidelines/>`_
