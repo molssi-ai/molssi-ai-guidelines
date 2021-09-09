@@ -15,6 +15,7 @@ Our current list of guidelines cosissts of the following set of documents
 
     ml/index
     zenodo/index
+    references
     acknowledgements
 
 Indices and tables
