@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3.1. MolSSI Guidelines on APOD Cyclic Parallelization Strategy &mdash; MolSSI Guidelines, Checklists and Best Practices a270ea9 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MP6QMKL');</script>
+<!-- End Google Tag Manager -->
+
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. References" href="../references.html" />
+    <link rel="prev" title="3. High-Performance Computing Guidelines" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MP6QMKL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+ 
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MolSSI Guidelines, Checklists and Best Practices
+          </a>
+              <div class="version">
+                a270ea9
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../zenodo/index.html">1. MolSSI Guidelines for Software Publications on Zenodo Platform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../zenodo/zenodo_publishing.html">1.1. MolSSI Publishing Guidelines on Zenodo Platform</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ml/index.html">2. Machine Learning Guidelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ml/ml_formatting_guidelines.html">2.1. MolSSI Formatting Guidelines for Machine Learning Products</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. High-Performance Computing Guidelines</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.1. MolSSI Guidelines on APOD Cyclic Parallelization Strategy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">4. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../acknowledgements.html">5. Acknowledgements</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MolSSI Guidelines, Checklists and Best Practices</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">3. </span>High-Performance Computing Guidelines</a> &raquo;</li>
+      <li><span class="section-number">3.1. </span>MolSSI Guidelines on APOD Cyclic Parallelization Strategy</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/hpc/hpc_apod_guidelines.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="molssi-guidelines-on-apod-cyclic-parallelization-strategy">
+<span id="hpc-guidelines"></span><h1><span class="section-number">3.1. </span>MolSSI Guidelines on APOD Cyclic Parallelization Strategy<a class="headerlink" href="#molssi-guidelines-on-apod-cyclic-parallelization-strategy" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Source: <a class="reference external" href="https://doi.org/10.5281/zenodo.5866422"><img alt="hpc_badge" src="https://zenodo.org/badge/DOI/10.5281/zenodo.5866422.svg" /></a></p></li>
+</ul>
+<p>This document is based on NVIDIA’s <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html">CUDA C++ Best Practices Guide</a>
+and presents a systematic cyclic strategy for parallelizing serial codes using CUDA toolkit.</p>
+<section id="prerequisites">
+<h2><span class="section-number">3.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"></a></h2>
+<p>This guide assumes the user is familiar with the (CUDA) C++ programming language and has access to CUDA-capable graphical
+processing units (GPUs) and an existing working serial code.</p>
+</section>
+<section id="systematic-acceleration-strategy">
+<h2><span class="section-number">3.1.2. </span>Systematic Acceleration Strategy<a class="headerlink" href="#systematic-acceleration-strategy" title="Permalink to this headline"></a></h2>
+<p>The main focus of this guide is to present a four-step cycle to accelerate a sequential code for NVIDIA GPUs using CUDA C++.
+This cycle consists of <strong>assessment</strong>, <strong>parallelization</strong>, <strong>optimization</strong> and <strong>deployment</strong> (APOD). The APOD prioritizes
+its recommendations based on their efficiency and scope i.e., actions that provide significant performance improvements have
+higher priorities. This prioritization allows programmers to benefit from incremental speedups as early as possible while making
+the changes to the code localized and evolutionary not revolutionary.</p>
+<section id="assessment">
+<h3><span class="section-number">3.1.2.1. </span>Assessment<a class="headerlink" href="#assessment" title="Permalink to this headline"></a></h3>
+<p>A systematic way to gain quantitative knowledge about your code and locate the bottlenecks in the execution time is using profilers
+such as GNU’s <em>gprof</em> as well as NVIDIA’s <em>NSight Systems</em> and <em>Nsight Compute</em>. Loops are common targets for parallelization because
+they perform a single instruction multiple times. After identifying hotspots in the code, one can set a theoretical upper bound for
+the expected speedups using <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#strong-scaling-and-amdahls-law">Amdahl’s (strong scaling)</a>
+and/or <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#weak-scaling-and-gustafsons-law">Gustafson’s (weak scaling)</a>
+laws.</p>
+</section>
+<section id="parallelization">
+<h3><span class="section-number">3.1.2.2. </span>Parallelization<a class="headerlink" href="#parallelization" title="Permalink to this headline"></a></h3>
+<p>Depending on the application and the nature of the target code sections identified in the previous step, there are three possible major
+tools that can be adopted for parallelization: (i) <strong>parallel libraries</strong>, (ii) <strong>parallelizing compilers</strong> and (iii) <strong>custom codes</strong>.</p>
+<section id="parallel-libraries">
+<h4><em>Parallel Libraries</em><a class="headerlink" href="#parallel-libraries" title="Permalink to this headline"></a></h4>
+<p>The explicit usage of parallel libraries (such as <em>Thrust</em>) or replacing  the existing libraries in the serial code with their parallel
+alternatives (such as switching from <em>BLAS</em> to <em>cuBLAS</em>) is probably the most convenient way to implement parallelization.</p>
+</section>
+<section id="parallelizing-compilers">
+<h4><em>Parallelizing Compilers</em><a class="headerlink" href="#parallelizing-compilers" title="Permalink to this headline"></a></h4>
+<p>Compiler directives such as <em>OpenMP</em> and <em>OpenACC</em> can also be employed to provide hints to the compilers for parallelizing specific sections
+of the program and mapping the computations to the computing unit’s architecture without modifying the underlying codes.</p>
+</section>
+<section id="custom-codes">
+<h4><em>Custom Codes</em><a class="headerlink" href="#custom-codes" title="Permalink to this headline"></a></h4>
+<p>Whenever the existing functionality of the parallel libraries and compiler directives are not sufficient for the target programming purposes,
+adopting parallel programming languages such as CUDA C/C++ or Data-Parallel C++ becomes necessary. Using these programming languages, the code
+hotspots can be refactored into kernels and launched on the accelerator architectures such as GPUs and field programmable gate arrays.</p>
+</section>
+</section>
+<section id="optimization">
+<h3><span class="section-number">3.1.2.3. </span>Optimization<a class="headerlink" href="#optimization" title="Permalink to this headline"></a></h3>
+<p>Parallel code optimization techniques improve the performance of the implemented code and allow for an early realization of the speedups from
+the parallelization step in the APOD cycle. In general, performance optimization involves three main techniques: (i) <strong>maximizing parallelism</strong>,
+(ii) <strong>maximizing memory bandwidth</strong>, and (iii) <strong>maximizing instruction bandwidth</strong>.</p>
+<section id="maximizing-parallelism">
+<h4><em>Maximizing Parallelism</em><a class="headerlink" href="#maximizing-parallelism" title="Permalink to this headline"></a></h4>
+<p>According to Amdahl’s law, one can improve the performance by exposing as much parallelism in the code as possible. After the parallelization
+step, an efficient mapping of the algorithms and data structures to the accelerator hardware architecture is crucial. The maximum hardware
+occupancy is often desired and can be achieved by trial and error with documenting the performance of various execution configurations in the
+target kernel launch. High-level optimization techniques such as exposing concurrent execution on multiple device streams and maximizing the
+overlap between data transfer and computation are also necessary for performance improvement.</p>
+</section>
+<section id="maximizing-memory-bandwidth">
+<h4><em>Maximizing Memory Bandwidth</em><a class="headerlink" href="#maximizing-memory-bandwidth" title="Permalink to this headline"></a></h4>
+<p>In order to optimize the memory utilization, one should minimize the data transfer between the host and the device(s). Kernel’s access to global
+memory should also be minimized in favor of maximizing the usage of device’s shared memory. Care must be taken for an optimal organization of memory
+access patterns.</p>
+</section>
+<section id="maximizing-instruction-bandwidth">
+<h4><em>Maximizing Instruction Bandwidth</em><a class="headerlink" href="#maximizing-instruction-bandwidth" title="Permalink to this headline"></a></h4>
+<p>Low-throughput arithmetic instructions and thread warp divergence in control flows should be avoided for instruction optimization. Whenever possible,
+single-precision computations should be employed (instead of double-precision) for a trade-off between the expected accuracy and performance.</p>
+</section>
+</section>
+<section id="deployment">
+<h3><span class="section-number">3.1.2.4. </span>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline"></a></h3>
+<p>Compute capabilities determine the features available on each generation of the accelerator devices. As such, in order to support all features
+available in the program and maximum performance optimization by the compiler, the source code should be compiled for the native compute compatibility
+of the target GPU(s). For industrial applications in parallel environments, NVIDIA Management Library (NVML) and
+<a class="reference external" href="https://developer.nvidia.com/cluster-management">cluster management tools</a> can be employed to maximize efficiency and performance.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="3. High-Performance Computing Guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../references.html" class="btn btn-neutral float-right" title="4. References" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+
+<p>
+<div class="row">
+  <div class="column_left">
+    <a href="https://molssi.org/" target="_blank" title="Go to MolSSI in a new tab">
+      <img src="https://molssi.github.io/molssi-guidelines/_images/MolSSI.jpg" alt="The MolSSI" style="border:0;">
+    </a>
+  </div>
+  <div class="column">
+    &copy; Copyright 2021, the Molecular Sciences Software Institute,
+    which receives funding from the National Science Foundation under awards OAC-1547580 and CHE-2136142
+  </div>
+  <div class="column_right">
+    <a href="https://nsf.gov/" target="_blank" title="Go to the NSF in a new tab">
+      <img src="https://molssi.github.io/molssi-guidelines/_images/NSF_4-Color_bitmap_Logo.png" alt="The NSF" style="border:0;">
+    </a>
+  </div>
+</div>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
+</a>
+<br />This work is licensed under a
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+  Creative Commons Attribution-ShareAlike 4.0 International License
+</a>.
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
