@@ -13,8 +13,9 @@ Our current list of guidelines cosissts of the following set of documents
     :titlesonly:
     :numbered: 4
 
-    ml/index
     zenodo/index
+    ml/index
+    hpc/index
     references
     acknowledgements
 

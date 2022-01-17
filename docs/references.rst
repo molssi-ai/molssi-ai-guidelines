@@ -9,7 +9,7 @@ development communities. As such, we also include references from the literature
 develop our guidelines and best practices for the computer and molecular sciences (CMSs) communities. 
 
 The provided list is not meant to be complete but the intention is to include only those resources that can be impactful 
-to the CMS communities. Please let us know, by opening an issue in our `Github Repository <https://github.com/MolSSI/molssi-guidelines>`_,
+to the CMS communities. Please let us know, by opening an issue in our `GitHub Repository <https://github.com/MolSSI/molssi-guidelines>`_,
 if you think we have missed or overlooked an important reference.
 
 Scientific Literature
@@ -21,6 +21,8 @@ Scientific Literature
 
 Public Software Repositories
 ============================
+
+* `NVIDIA Corporation & affiliates, "CUDA C++ Best Practices Guide", v11.6.0 (Jan. 12, 2022) <https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html>`_
 
 Organizations and Institutions
 ==============================

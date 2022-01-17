@@ -9,7 +9,7 @@ might be useful for regimenting routine tasks for performing machine learning (M
 in computer and molecular sciences (CMSs). These guidelines cover pertinent topics in ML in general, from
 data engineering such as file formatting, naming conventions to sharing models in open-access environments
 to necessary steps to publish datasets, models and workflows to improve appropriate starategies for data 
-management and reproducability of the scientific results.
+management and reproducibility of the scientific results.
 
 .. toctree::
     :maxdepth: 5
